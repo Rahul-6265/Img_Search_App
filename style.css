@@ -1,69 +1,88 @@
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: lightgrey;
-}
-
-h1 {
-    margin-top: 15px;
-    text-shadow: 1px 1px rgb(10, 98, 130);
 }
 
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #064663;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .main {
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
-    width: 100%;
-    /* background-image: linear-gradient(to right, rgb(123, 216, 255), rgb(218, 244, 255)); */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#inp {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #064663;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0474a5;
+}
+
+#error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
 }
 
 #outputdiv {
-    /* height: 20%; */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
-}
-
-#outputdiv h1 {
-    text-align: center;
-    font-size: 3rem;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .imageDiv {
-    margin: 2%;
-    box-shadow: 5px 5px 5px;
-}
-
-#inp {
-    width: 30%;
-    padding: 8px;
-    margin: 3%;
-    border: none;
-    border-radius: 6px;
-    box-shadow: 5px 5px 9px rgb(41, 39, 39);
+    width: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
     background-color: white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button {
-    padding: 15px;
-    width: 13%;
-    margin-bottom: 3%;
-    background-color: rgb(10, 98, 130);
-    border: none;
-    box-shadow: 5px 5px 9px black;
-    color: white;
-    font-size: 17px;
-    border-radius: 6px;
+.imageDiv img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.imageDiv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
